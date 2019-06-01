@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+      <ion-title>Editar {{game.nome}}</ion-title>
+      <ion-button fill="clear" (click)="save()">
+        <ion-icon name="md-save"></ion-icon>
+      </ion-button>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="editarForm">
+    <ion-row>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput type="text" name="nome" placeholder="Nome do Jogo" formControlName="nome">
+      </mat-form-field>
+    </ion-row>
+    <ion-row>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-select formControlName="plataforma">
+          <mat-option label="Selecione">Selecione</mat-option>
+          <mat-option value="xbox">X-BOX</mat-option>
+          <mat-option value="ps4">PS4</mat-option>
+          <mat-option value="pc">PC</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </ion-row>
+    <ion-row>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput type="date" name="nome" placeholder="Nome do Jogo" formControlName="dataLancamento">
+      </mat-form-field>
+    </ion-row>
+    <ion-row>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput type="number" name="nome" placeholder="Nome do Jogo" formControlName="preco">
+      </mat-form-field>
+    </ion-row>
+  </form>
+</ion-content>

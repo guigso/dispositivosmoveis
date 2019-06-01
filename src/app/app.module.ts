@@ -14,17 +14,22 @@ import { DemoMaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt, 'pt');
 //firebase
 import { AngularFireModule } from '@angular/fire';
 import environment from './environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { EditarPage } from './pages/editar/editar.page';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, EditarPage],
+  entryComponents: [EditarPage],
   imports: [BrowserModule, BrowserAnimationsModule, IonicModule.forRoot(), DemoMaterialModule, AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase)
-    , AngularFirestoreModule],
+    , AngularFirestoreModule, ReactiveFormsModule],
   providers: [
     StatusBar,
     SplashScreen,
