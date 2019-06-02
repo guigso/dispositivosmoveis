@@ -19,7 +19,6 @@ export class CadastrarPage implements OnInit {
   }
 
   ngOnInit() {
-    this.items.subscribe(items => (console.log(items)))
     this.cadastroForm = this.fb.group({
       nome: new FormControl('', Validators.required),
       plataforma: new FormControl('', Validators.required),

@@ -9,7 +9,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-
 import { DemoMaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
@@ -20,16 +19,21 @@ registerLocaleData(localePt, 'pt');
 //firebase
 import { AngularFireModule } from '@angular/fire';
 import environment from './environment';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { EditarPage } from './pages/editar/editar.page';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, EditarPage],
   entryComponents: [EditarPage],
-  imports: [BrowserModule, BrowserAnimationsModule, IonicModule.forRoot(), DemoMaterialModule, AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase)
-    , AngularFirestoreModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    IonicModule.forRoot(),
+    DemoMaterialModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    ReactiveFormsModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
@@ -37,4 +41,4 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
