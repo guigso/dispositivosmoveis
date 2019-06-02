@@ -1,22 +1,31 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Game Database
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    <ion-card (click)="goTo('cadastrar')">
-      <ion-card-header>
-        Cadastrar
-      </ion-card-header>
-    </ion-card>
-    <ion-card (click)="goTo('listar')">
-        <ion-card-header>
-          Listar
-        </ion-card-header>
-      </ion-card>
+    <ion-row justify-content-center>
+      <ion-col size="4">
+        <ion-card (click)="goTo('cadastrar')" text-center>
+          <h1 >
+            Cadastrar
+          </h1>
+          <ion-icon  name="md-add"></ion-icon>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card (click)="goTo('listar')" text-center>
+          <h1 >
+            Listar
+          </h1>
+          <ion-icon   name="md-list"></ion-icon>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>
