@@ -13,6 +13,11 @@ import { DemoMaterialModule } from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
+import { FileChooser } from '@ionic-native/file-chooser/ngx'
+import { FilePath } from '@ionic-native/file-path/ngx'
+import { File } from '@ionic-native/file/ngx'
+import { Camera } from '@ionic-native/camera/ngx';
+
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 registerLocaleData(localePt, 'pt');
@@ -37,7 +42,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Camera,
+    FileChooser,
+    FilePath,
+    File
   ],
   bootstrap: [AppComponent]
 })

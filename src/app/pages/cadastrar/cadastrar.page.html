@@ -41,9 +41,17 @@
               <input matInput type="number" name="nome" placeholder="Preço" formControlName="preco">
             </mat-form-field>
           </ion-row>
+          <ion-row class="ion-justify-content-center">
+            <ion-button color="secondary" (click)="enviarArquivo()">
+              <ion-icon name="md-cloud-upload" class="ion-padding-end"></ion-icon> Upload foto
+            </ion-button>
+            <ion-button color="secondary" (click)="tirarFoto()">
+              <ion-icon name="md-camera" class="ion-padding-end"></ion-icon> Tirar foto
+            </ion-button>
+          </ion-row>
         </form>
         <ion-button (click)="save()">
-          <ion-icon name="md-save"></ion-icon> Salvar
+          <ion-icon name="md-save" class="ion-padding-end"></ion-icon> Salvar
         </ion-button>
       </ion-col>
     </ion-row>
